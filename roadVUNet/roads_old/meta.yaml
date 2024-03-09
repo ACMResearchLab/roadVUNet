@@ -1,0 +1,22 @@
+description: |
+  # Custom road data
+
+  For testing purposes
+
+  > **Warning:** Make sure to set the target root to the parent working
+  > directory of this `meta.yaml` file.
+
+
+loaders:
+    skeleton: image
+    target: image
+
+loader_kwargs:
+    skeleton:
+        root: 'roadVUNet/roads'
+        support: -1->1
+        resize_to: 256
+    target:
+        root: 'roadVUNet/roads'
+        support: -1->1
+        resize_to: 256

@@ -1,0 +1,60 @@
+[INFO] [run]: /opt/conda/bin/edflow -n test_vunet -b configs/base.yaml configs/prjoti.yaml -t
+[INFO] [run]: root: logs/2024-03-01T05-28-28_test_vunet
+[INFO] [run]: hostname: jupyter-asriram5-40ucsc-2eedu
+[INFO] [run]: tmux: 
+[INFO] [run]: pid: 915
+[INFO] [run]: pgid: 915
+[INFO] [run]: Project structure:
+logs/2024-03-01T05-28-28_test_vunet
+├╴code
+├╴train
+  ├╴checkpoints
+├╴eval
+├╴configs
+
+[INFO] [main]: Training config:
+batch_size: 8
+code_root: null
+data_root: roadVUNet/roads
+datasets:
+  train: VUNet.data.prjoti.Prjoti_VUNet_train
+  validation: VUNet.data.prjoti.Prjoti_VUNet_val
+integrations:
+  tensorboardX:
+    active: false
+  wandb:
+    active: false
+iterator: VUNet.iterator.Iterator
+losses:
+  KL:
+    end_ramp_it: 3500
+    end_ramp_val: 1
+    start_ramp_it: 2000
+    start_ramp_val: 0
+  color_L1:
+    weight: 0.5
+  color_L2:
+    weight: 0.0
+  color_gradient:
+    weight: 0.0
+  perceptual:
+    vgg_feat_weights:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    weight: 1.0
+lr: 0.0001
+model: VUNet.VUnet
+model_pars:
+  dropout_prob: 0.0
+  final_act: true
+  img_channels: 3
+  nf_max: 128
+  nf_start: 64
+  pose_channels: 3
+  spatial_size: 512
+num_epochs: 100
+

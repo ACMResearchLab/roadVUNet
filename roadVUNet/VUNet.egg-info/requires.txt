@@ -1,0 +1,9 @@
+edflow==0.4.0
+PyYAML
+matplotlib
+numpy
+pytest
+streamlit
+torch
+torchvision
+tqdm

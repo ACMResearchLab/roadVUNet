@@ -1,0 +1,4 @@
+data_root: roads
+datasets:
+  train: VUNet.data.prjoti.Prjoti_VUNet_train
+  validation: VUNet.data.prjoti.Prjoti_VUNet_val
